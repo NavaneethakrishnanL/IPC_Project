@@ -92,7 +92,9 @@ def ask():
     context = get_relevant_context(query)
     prompt = f"Context:\n{context}\n\nQuestion: {query}\nAnswer:"
     response = generate_answer(prompt)
+    print("executed")
     return render_template("index.html", response=response)
 
 if __name__ == "__main__":
     app.run(debug=True)
+    
